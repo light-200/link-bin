@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --background-color: rgb(43, 43, 43);
+  --font-color: rgb(255, 255, 255);
+  --highlight-color: pink;
+  --h1-size: 20px;
+  --h2-size: 15px;
+  --h3-size: 10px;
+  --small-padding: 5px;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  font-weight: bolder;
+}
+
+header {
+  display: block;
+  padding: var(--small-padding);
+  font-size: var(--h2-size);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: solid rgba(255, 255, 255, 0.603);
+  border-width: 1px 0 0 0;
+  padding: var(--small-padding);
+  font-size: var(--h2-size);
+
+  max-height: 270px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-gutter: stable;
+}
+
+.container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.container::-webkit-scrollbar-track {
+  background-color: #646464;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: #d6d6d6;
+  border-radius: 100px;
+  height: 20px;
+}
+
+.link {
+  padding: 0.5rem;
+  background-color: var(--font-color);
+  margin: 5px 0;
+
+  border-radius: 5px;
+}
+
+.link > a {
+  text-decoration: none;
+  color: var(--background-color);
+}
+.addLink {
+  padding: var(--small-padding);
+  display: flex;
+  gap: 5px;
+}
+
+input {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.newLink {
+  flex: 8;
+  background-color: rgb(255, 255, 255);
+  border: none;
+}
+
+input:focus {
+  outline: 0.5px solid var(--highlight-color);
+}
+
+input[type="submit"] {
+  color: var(--background-color);
+  font-weight: bolder;
+  background-color: white;
+  border: none;
+}
+
+input[type="submit"]:active {
+  background-color: grey;
+}
