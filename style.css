@@ -26,6 +26,8 @@ header {
   font-size: var(--h2-size);
 }
 
+/* this component contains all the added links  */
+
 .container {
   display: flex;
   flex-direction: column;
@@ -42,6 +44,8 @@ header {
   scrollbar-gutter: stable;
 }
 
+/* this styles the scrollbar */
+
 .container::-webkit-scrollbar {
   width: 5px;
 }
@@ -56,6 +60,8 @@ header {
   height: 20px;
 }
 
+/* the actual link element  */
+
 .link {
   padding: 0.5rem;
   background-color: var(--font-color);
@@ -68,6 +74,9 @@ header {
   text-decoration: none;
   color: var(--background-color);
 }
+
+/* this component contains the input and add button  */
+
 .addLink {
   padding: var(--small-padding);
   display: flex;
