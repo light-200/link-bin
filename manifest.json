@@ -11,6 +11,6 @@
     "default_popup": "popup.html"
   },
   "icons": {
-    "128": "asstes/icon.png"
+    "128": "assets/icon.png"
   }
 }
