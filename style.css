@@ -5,32 +5,25 @@
 }
 
 :root {
-  --background-color: #1b6c9e;
+  --background-color: rgb(43, 43, 43);
   --font-color: rgb(255, 255, 255);
-  /* --highlight-color: pink; */
-  /* --h1-size: 20px;
+  --highlight-color: pink;
+  --h1-size: 20px;
   --h2-size: 15px;
   --h3-size: 10px;
-  --small-padding: 5px; */
+  --small-padding: 5px;
 }
 
 body {
-  background-color: rgb(214, 237, 241);
+  background-color: var(--background-color);
   color: var(--font-color);
   font-weight: bolder;
 }
 
 header {
   display: block;
-  margin:5% 43%;
-  /* border: 10% solid black; */
-  padding: 2% 1% 2% 2%;
-  font-size: 3.5vw;
-  color: white;
-  background-color:#2494DA;
-  border-radius: 150px;
-  box-shadow: 5px 10px #1b6c9e;
-
+  padding: var(--small-padding);
+  font-size: var(--h2-size);
 }
 
 /* this component contains all the added links  */
@@ -39,21 +32,16 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border: solid rgba(255, 255, 255, 0.603);
+  border: solid rgba(255, 255, 255, 0.603);
   border-width: 1px 0 0 0;
   padding: var(--small-padding);
-  font-size: var(--h2-size); */
+  font-size: var(--h2-size);
 
   max-height: 270px;
   overflow-y: auto;
   overflow-x: hidden;
-  font-size: 1vw;
-  color:white;
-  background-color:#84b5d3;
-  border-radius: 15px;
-  scrollbar-gutter: stable;
-  margin: 0% 15% ;
 
+  scrollbar-gutter: stable;
 }
 
 /* this styles the scrollbar */
@@ -90,11 +78,9 @@ header {
 /* this component contains the input and add button  */
 
 .addLink {
-  margin: 1.5% 15% ;
   padding: var(--small-padding);
   display: flex;
   gap: 5px;
-
 }
 
 input {
