@@ -1,6 +1,30 @@
 const container = document.querySelector(".container");
 const addButton = document.querySelector("input[type=submit]");
 const newLink = document.querySelector(".newLink");
+var checkbox = document.querySelector('input[type="checkbox"]');
+
+// dark mode switching function
+
+if (checkbox.checked) 
+    { document.documentElement.style.setProperty('--background-color', '#000000');
+    document.documentElement.style.setProperty('--font-color', '#FFFFFF'); 
+
+}
+document.addEventListener('DOMContentLoaded', function () {
+  checkbox.addEventListener('change', function () {
+    if (checkbox.checked) 
+    { document.documentElement.style.setProperty('--background-color', '#000000');
+    document.documentElement.style.setProperty('--font-color', '#FFFFFF'); 
+     
+     console.log('checked');
+    }else {
+      document.documentElement.style.setProperty('--background-color', '#ffffff');
+      document.documentElement.style.setProperty('--font-color', '#000000'); 
+       
+      console.log('unchecked');
+    } 
+  });
+});
 
 //the following function gets triggered when the "add" button is clicked
 //it adds the link to the list
@@ -32,3 +56,5 @@ addButton.addEventListener("click", () => {
   container.appendChild(newElmt);
   newLink.value = " ";
 });
+
+// function to switch between light and dark mode

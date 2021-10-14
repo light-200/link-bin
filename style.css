@@ -5,26 +5,51 @@
 }
 
 :root {
-  --background-color: rgb(43, 43, 43);
+ new-css-layout
+  --background-color: '#000000';
+  --font-color: '#ffffff';
+
+/*   --background-color: rgb(43, 43, 43);
   --font-color: rgb(255, 255, 255);
-  --highlight-color: pink;
+  --highlight-color: pink; */
+
   --h1-size: 20px;
   --h2-size: 15px;
   --h3-size: 10px;
   --small-padding: 5px;
 }
 
+
 body {
   background-color: var(--background-color);
   color: var(--font-color);
   font-weight: bolder;
 }
+/* header section starts */
 
 header {
   display: block;
   padding: var(--small-padding);
-  font-size: var(--h2-size);
+  font-size: var(--h1-size);
+  font-family: 'Gill Sans';
 }
+
+img{
+  padding-top: 8px;
+  padding-left: 3px;
+  width:26px;
+  height:26px;
+}
+
+p{
+  font-size:20px;
+  font-weight: bold;
+  font-family: 'Gill Sans';
+/*
+  font-size: var(--h2-size);
+ */
+}
+
 
 /* this component contains all the added links  */
 
@@ -90,21 +115,85 @@ input {
 
 .newLink {
   flex: 8;
-  background-color: rgb(255, 255, 255);
-  border: none;
-}
+  background-color: #FFFFFF;
+  color:#000000;
+  border-radius: 2px;
+  border: 2px solid #000000;
+  }
 
 input:focus {
   outline: 0.5px solid var(--highlight-color);
 }
 
 input[type="submit"] {
-  color: var(--background-color);
+  color: #000000;
   font-weight: bolder;
-  background-color: white;
-  border: none;
+  border: 2px solid #000000;
 }
 
 input[type="submit"]:active {
   background-color: grey;
 }
+
+/*  dark mode part */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 28px;
+}
+
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
