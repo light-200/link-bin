@@ -86,18 +86,30 @@ p{
 }
 
 /* the actual link element  */
+.info{
+  padding: 0.5rem;
+  background-color: #000000;
+  margin: 5px 0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 5px;
+}
+
+.info > a {
+  text-decoration: none;
+  color: #ffffff;
+}
 
 .link {
   padding: 0.5rem;
-  background-color: var(--font-color);
+  background-color: #FFFFFF;
   margin: 5px 0;
-
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   border-radius: 5px;
 }
 
 .link > a {
   text-decoration: none;
-  color: var(--background-color);
+  color: #000000;
 }
 
 /* this component contains the input and add button  */
@@ -111,6 +123,7 @@ p{
 input {
   padding: 5px;
   border-radius: 5px;
+  border-radius: 25px;
 }
 
 .newLink {
@@ -119,6 +132,7 @@ input {
   color:#000000;
   border-radius: 2px;
   border: 2px solid #000000;
+  border-radius: 25px;
   }
 
 input:focus {
@@ -140,8 +154,8 @@ input[type="submit"]:active {
 .switch {
   position: relative;
   display: inline-block;
-  width: 55px;
-  height: 28px;
+  width: 40px;
+  height: 18px;
 }
 
 
@@ -166,10 +180,10 @@ input[type="submit"]:active {
 .slider:before {
   position: absolute;
   content: "";
-  height: 20px;
-  width: 20px;
-  left: 4px;
-  bottom: 4px;
+  height: 15px;
+  width: 14px;
+  left: 0px;
+  bottom: 2px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
